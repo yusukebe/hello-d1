@@ -1,33 +1,33 @@
-import { jsx } from "hono/jsx";
-import { Layout } from "./Layout";
+import { jsx } from 'hono/jsx'
+import { Layout } from './Layout'
 
 const Form = () => {
   return (
-    <form action="/post" method="POST">
+    <form action='/post' method='POST'>
       <label>
         Title:
-        <input name="title" />
+        <input name='title' />
       </label>
       <label>
         Body:
-        <textarea name="body" rows="5" cols="33"></textarea>
+        <textarea name='body' rows='5' cols='33'></textarea>
       </label>
-      <input type="submit" />
+      <input type='submit' />
     </form>
-  );
-};
+  )
+}
 
 export type Post = {
-  id: number;
-  title: string;
-  body: string;
-};
+  id: number
+  title: string
+  body: string
+}
 
 export const Top = (props: { posts: Post[] }) => {
   return (
     <Layout>
       <h1>
-        <a href="/">Hello D1!</a>
+        <a href='/'>Hello D1!</a>
       </h1>
       <Form />
       <hr />
@@ -37,8 +37,8 @@ export const Top = (props: { posts: Post[] }) => {
             <h2>{post.title}</h2>
             <p>{post.body}</p>
           </article>
-        );
+        )
       })}
     </Layout>
-  );
-};
+  )
+}

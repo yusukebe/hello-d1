@@ -1,4 +1,4 @@
-import { html } from "hono/html";
+import { html } from 'hono/html'
 
 export const Layout = (props: any) => html`<!DOCTYPE html>
   <html>
@@ -12,4 +12,4 @@ export const Layout = (props: any) => html`<!DOCTYPE html>
     <body>
       <main class="container">${props.children}</main>
     </body>
-  </html>`;
+  </html>`
