@@ -1,0 +1,18 @@
+{
+  "name": "hello-d1",
+  "version": "0.0.1",
+  "main": "src/index.tsx",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev src/index.tsx --local --experimental-enable-local-persistence",
+    "create:db": "sqlite3 wrangler-local-state/d1/DB.sqlite3 < ./blog.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^0.0.0-63cc1693"
+  },
+  "dependencies": {
+    "@cloudflare/d1": "^1.4.1",
+    "hono": "^2.0.5"
+  }
+}
