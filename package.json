@@ -10,11 +10,12 @@
     "create:db": "cat ./blog.sql | sqlite3 ./db/d1/DB.sqlite3"
   },
   "devDependencies": {
+    "@cloudflare/d1": "^1.4.1",
     "better-sqlite3": "7.6.2",
     "wrangler": "^0.0.0-7c228171"
   },
   "dependencies": {
-    "@cloudflare/d1": "^1.4.1",
+    "@honojs/validator": "^0.1.1",
     "hono": "^2.0.9"
   }
 }

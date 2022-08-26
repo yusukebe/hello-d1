@@ -1,5 +1,6 @@
 import { jsx } from 'hono/jsx'
 import { Layout } from './Layout'
+import type { Post } from './type'
 
 const Form = () => {
   return (
@@ -15,12 +16,6 @@ const Form = () => {
       <input type='submit' />
     </form>
   )
-}
-
-export type Post = {
-  id: number
-  title: string
-  body: string
 }
 
 export const Top = (props: { posts: Post[] }) => {
