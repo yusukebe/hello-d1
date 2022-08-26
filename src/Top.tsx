@@ -1,6 +1,6 @@
 import { jsx } from 'hono/jsx'
 import { Layout } from './Layout'
-import type { Post } from './type'
+import type { Post } from './types'
 
 const Form = () => {
   return (

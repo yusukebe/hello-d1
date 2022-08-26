@@ -3,7 +3,7 @@ import { jsx } from 'hono/jsx'
 import { validation } from '@honojs/validator'
 import type { Database } from '@cloudflare/d1'
 import { Top } from './Top'
-import type { Post } from './type'
+import type { Post } from './types'
 
 interface Env {
   DB: Database
