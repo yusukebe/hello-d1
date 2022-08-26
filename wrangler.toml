@@ -1,8 +1,8 @@
 name = "first-d1"
-main = "src/index.ts"
-compatibility_date = "2022-07-31"
+main = "src/index.tsx"
+compatibility_date = "2022-08-26"
 
 [[ d1_databases ]]
 binding = "DB"
-database_name = "db"
-database_id = ""
+database_name = "blog"
+database_id = "e294c581-2540-4daf-b269-877cb2b8c89d"

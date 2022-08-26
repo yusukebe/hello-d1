@@ -12,7 +12,7 @@ const app = new Hono<Env>()
 
 app.get('/', async (c) => {
   const response = await c.env.DB.prepare(
-    `SELECT id,title,body FROM post`
+    `SELECT id,title,body FROM post;`
   ).all()
   const posts: Array<Post> = response.results
   return c.html(<Top posts={posts} />)

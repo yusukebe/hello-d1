@@ -5,14 +5,16 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "wrangler dev src/index.tsx --local --experimental-enable-local-persistence",
-    "create:db": "sqlite3 wrangler-local-state/d1/DB.sqlite3 < ./blog.sql"
+    "dev": "wrangler dev src/index.tsx --local --persist-to ./db",
+    "deploy": "wrangler publish src/index.tsx",
+    "create:db": "cat ./blog.sql | sqlite3 ./db/d1/DB.sqlite3"
   },
   "devDependencies": {
-    "wrangler": "^0.0.0-63cc1693"
+    "better-sqlite3": "7.6.2",
+    "wrangler": "^0.0.0-7c228171"
   },
   "dependencies": {
     "@cloudflare/d1": "^1.4.1",
-    "hono": "^2.0.5"
+    "hono": "^2.0.9"
   }
 }
