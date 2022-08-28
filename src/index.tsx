@@ -9,7 +9,7 @@ interface Env {
   DB: Database
 }
 
-const app = new Hono<Env>()
+const app = new Hono<{ Bindings: Env }>()
 
 app.get('/', async (c) => {
   const { results } = await c.env.DB.prepare(
@@ -35,7 +35,7 @@ app.post(
 )
 
 app.post('/post', async (c) => {
-  const { title, body } = (await c.req.parseBody()) as Post
+  const { title, body } = await c.req.parseBody()
   await c.env.DB.prepare(`INSERT INTO post(title, body) VALUES(?, ?);`)
     .bind(title, body)
     .run()
