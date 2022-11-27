@@ -1,21 +1,19 @@
 {
   "name": "hello-d1",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/index.tsx",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "wrangler dev src/index.tsx --local --persist-to ./db",
+    "dev": "wrangler dev src/index.tsx",
     "deploy": "wrangler publish src/index.tsx",
-    "create:db": "cat ./blog.sql | sqlite3 ./db/d1/DB.sqlite3"
+    "create:db": "wrangler d1 execute blog --file ./blog.sql"
   },
   "devDependencies": {
-    "@cloudflare/d1": "^1.4.1",
-    "better-sqlite3": "7.6.2",
-    "wrangler": "^0.0.0-7c228171"
+    "@cloudflare/workers-types": "^4.20221111.1",
+    "wrangler": "^2.4.4"
   },
   "dependencies": {
-    "@honojs/validator": "^0.1.1",
-    "hono": "^2.1.2"
+    "hono": "^2.5.6"
   }
 }
