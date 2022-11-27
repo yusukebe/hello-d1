@@ -5,12 +5,17 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "test": "jest",
     "dev": "wrangler dev src/index.tsx",
     "deploy": "wrangler publish src/index.tsx",
     "create:db": "wrangler d1 execute blog --file ./blog.sql"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20221111.1",
+    "@types/jest": "^29.2.3",
+    "esbuild-jest": "^0.5.0",
+    "jest": "^29.3.1",
+    "jest-environment-miniflare": "^2.11.0",
     "wrangler": "^2.4.4"
   },
   "dependencies": {

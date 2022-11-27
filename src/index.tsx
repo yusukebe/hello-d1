@@ -42,4 +42,6 @@ app.post(
   }
 )
 
+app.get('/hello', (c) => c.text('Hello!'))
+
 export default app
