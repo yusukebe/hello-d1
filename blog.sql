@@ -1,11 +1,11 @@
 CREATE TABLE post (
   id INTEGER PRIMARY KEY,
-	title TEXT NOT NULL,
-	body TEXT NOT NULL
+  title TEXT NOT NULL,
+  body TEXT NOT NULL
 );
 
 CREATE TABLE comment (
   id INTEGER PRIMARY KEY,
   post_id INTEGER NOT NULL,
-	body TEXT NOT NULL
+  body TEXT NOT NULL
 );
